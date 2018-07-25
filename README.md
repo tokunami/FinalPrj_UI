@@ -1,2 +1,2 @@
-# FinalPrj_UI
-UI part for the final project
+# MarketPicket-UI-mockup
+UI mockup for the final project
