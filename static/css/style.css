@@ -1810,9 +1810,9 @@ div[data-role="editor-toolbar"] {
 
   min-height: 140px;
 
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 
-  padding: 20px;
+  padding: 15px;
 
   color: white;
 
@@ -1840,9 +1840,9 @@ div[data-role="editor-toolbar"] {
 
   text-align: center;
 
-  margin-right: 20px;
+  margin-right: 10px;
 
-  padding-right: 20px;
+  padding-right: 10px;
 
   color: rgba(255, 255, 255, 0.75);
 
@@ -1850,13 +1850,23 @@ div[data-role="editor-toolbar"] {
 
 .info-box .count {
 
-  margin-top: 20px;
+  /* margin-top: 20px; */
 
   font-size: 34px;
 
   font-weight: 700;
 
 }
+
+.info-box .countSmall {
+
+    /* margin-top: 20px; */
+  
+    font-size: 28px;
+  
+    font-weight: 700;
+  
+  }
 
 .info-box .title {
 
@@ -5097,6 +5107,23 @@ ul.ft-link li a i {
     display: inline-block;
 
 }
+
+.profile-ava.twitter i {
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    /* display: block; */
+    font-size: 49px;
+    text-align: center;
+
+    background: #00aced;
+    color: white;
+  
+    margin: -1px -1px 1px -1px;
+
+    display: inline-block;
+  }
 
 .profile-ava img.simple{
 
