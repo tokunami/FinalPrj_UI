@@ -58,7 +58,23 @@ def getdata():
     #     mars_data,
     #     upsert=True
     # )
-    return redirect('http://localhost:5000')
+    # return redirect('http://localhost:5000')
+    return jsonify(getData.dummy_func())
+
+
+@app.route('/data/<symbol>')
+def getDetailedData(symbol):
+    # TODO call function which gets data from internal python file
+
+    # mars = mongo.db.mars
+    # mars_data = getData.dummy_func()
+    # mars.update(
+    #     {},
+    #     mars_data,
+    #     upsert=True
+    # )
+    # return redirect('http://localhost:5000')
+    return jsonify(getData.dummy_func())
 
 
 if __name__ == "__main__":

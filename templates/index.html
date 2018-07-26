@@ -435,14 +435,14 @@
                       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                           <div class="info-box dark-bg">
                               <i class="fa fa-shopping-cart"></i>
-                              <div class="count">{{data.stock_info[1].stockData[0].Trades}}</div>
+                              <div id = "transactinCount" class="count">{{data.stock_info[1].stockData[0].Trades}}</div>
                               <div class="title">Transaction</div>
                             </div>
                       </div>
                       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                           <div class="info-box brown-bg">
                             <i class="fa fa-usd"></i>
-                            <div class="countSmall">$ {{data.stock_info[1].stockData[0].High}}</div>
+                            <div id = "stockPrice" class="countSmall">$ {{data.stock_info[1].stockData[0].High}}</div>
                             <div class="title">Current Price</div>
                           </div>
                       </div>
@@ -465,7 +465,7 @@
                 </div>
               </div>
               <div class="panel-body">
-                <table class="table bootstrap-datatable countries">
+                <table id = "moverTable" class="table bootstrap-datatable countries">
                   <thead>
                     <tr>
                       <th></th>
@@ -476,88 +476,7 @@
                       <th></th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <!-- <td><img src="{{ url_for('static', filename='img/Germany.png') }}" style="height:18px; margin-top:-2px;"></td> -->
-                      <td></td>
-                      <td>{{data.stocks[0].symbol}}</td>
-                      <td>{{data.stocks[0].symbol}}</td>
-                      <td>{{data.stock_info[0].stockData[0].price}}</td>
-                      <td>{{data.stock_info[0].stockData[0].price_15min}}</td>
-                      <td><span class="label label-success">+1.5%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[1].symbol}}</td>
-                        <td>{{data.stocks[1].symbol}}</td>
-                        <td>{{data.stock_info[1].stockData[0].High}}</td>
-                        <td>{{data.stock_info[1].stockData[0].Low}}</td>
-                        <td><span class="label label-info">+0.1%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[2].symbol}}</td>
-                        <td>{{data.stocks[2].symbol}}</td>
-                        <td>{{data.stock_info[2].stockData[0].High}}</td>
-                        <td>{{data.stock_info[2].stockData[0].Low}}</td>
-                        <td><span class="label label-warning">-0.1%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[3].symbol}}</td>
-                        <td>{{data.stocks[3].symbol}}</td>
-                        <td>{{data.stock_info[1].stockData[1].High}}</td>
-                        <td>{{data.stock_info[1].stockData[1].Low}}</td>
-                        <td><span class="label label-danger">-2.5%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[4].symbol}}</td>
-                        <td>{{data.stocks[4].symbol}}</td>
-                        <td>{{data.stock_info[1].stockData[2].High}}</td>
-                        <td>{{data.stock_info[1].stockData[2].Low}}</td>
-                        <td><span class="label label-info">+0.3%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[5].symbol}}</td>
-                        <td>{{data.stocks[5].symbol}}</td>
-                        <td>{{data.stock_info[1].stockData[3].High}}</td>
-                        <td>{{data.stock_info[1].stockData[3].Low}}</td>
-                        <td><span class="label label-warning">-0.2%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[6].symbol}}</td>
-                        <td>{{data.stocks[6].symbol}}</td>
-                        <td>{{data.stock_info[1].stockData[4].High}}</td>
-                        <td>{{data.stock_info[1].stockData[4].Low}}</td>
-                        <td><span class="label label-success">+2.0%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[7].symbol}}</td>
-                        <td>{{data.stocks[7].symbol}}</td>
-                        <td>{{data.stock_info[2].stockData[1].High}}</td>
-                        <td>{{data.stock_info[2].stockData[1].Low}}</td>
-                        <td><span class="label label-success">+2.5%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[8].symbol}}</td>
-                        <td>{{data.stocks[8].symbol}}</td>
-                        <td>{{data.stock_info[2].stockData[2].High}}</td>
-                        <td>{{data.stock_info[2].stockData[2].Low}}</td>
-                        <td><span class="label label-danger">-1.8%</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{{data.stocks[9].symbol}}</td>
-                        <td>{{data.stocks[9].symbol}}</td>
-                        <td>{{data.stock_info[2].stockData[3].High}}</td>
-                        <td>{{data.stock_info[2].stockData[3].Low}}</td>
-                        <td><span class="label label-danger">-2.5%</span></td>
-                    </tr>
+                  <tbody id = "moverBody">
                   </tbody>
                 </table>
               </div>
